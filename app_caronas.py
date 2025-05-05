@@ -3,6 +3,10 @@ import json
 import os
 from datetime import datetime
 
+os.makedirs('.streamlit', exist_ok=True)
+with open('.streamlit/config.toml', 'w') as f:
+    f.write('[theme]\nbase="light"\n')
+
 ARQUIVO_CARONAS = 'caronas.json'
 DATA_EVENTO = '30/05/2025'
 DESTINO = 'Campos do Jordão - SP'
